@@ -1,0 +1,143 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 80px 0;
+
+    h2 {
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 139%;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: #91916C;
+    }
+
+    .contact {
+        width: 100%;
+        background: #91916C;
+        padding: 50px 0 150px;
+        margin-top: 60px;
+
+        .containers {
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        .contact_cont {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h3 {
+                font-family: 'Playfair Display';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 48px;
+                line-height: 139%;
+                text-align: center;
+                letter-spacing: 0.02em;
+                color: #FFFFFF;
+                max-width: 700px;
+                margin-bottom: 80px;
+            }
+
+            @media (max-width: 680px) {
+                h3 {
+                    font-size: 32px;
+                }
+            }
+
+            .sender {
+                display: flex;
+                justify-content: right;
+                gap: 60px;
+                width: 100%;
+                position: relative;
+
+                .cont_img {
+                    position: absolute;
+                    z-index: 10;
+                    bottom: -80%;
+                    left: 0;
+                    width: 418px;
+                    top: 0;
+                }
+
+
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 25px;
+
+                    .top_form {
+                        display: flex;
+                        gap: 10px;
+                    }
+
+                    input {
+                        padding: 15px 25px;
+                        font-family: 'Nunito Sans';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 135.5%;
+                        color: #FFFFFF;
+                        outline: none;
+                        border: none;
+                        background: rgba(225, 225, 194, 0.4);
+                        border-radius: 8px;
+                    }
+
+                    button {
+                        background: #E5A985;
+                        border-radius: 8px;
+                        font-family: 'Nunito Sans';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 20px;
+                        line-height: 135.5%;
+                        color: #FFFFFF;
+                        outline: none;
+                        border: none;
+                        padding: 15px 0;
+
+                        &:hover {
+                            background-color: #000000;
+                        }
+                    }
+                }
+
+                @media (max-width: 1250px) {
+                    justify-content: space-between;
+                    margin-left: 0;
+                    align-items: center;
+
+                    .cont_img {
+                        position: static;
+                    }
+                }
+                @media (max-width: 1050px) {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+
+                @media (max-width: 680px) {
+                    form {
+                        .top_form {
+                            flex-wrap: wrap;
+                            justify-content: center;
+
+                            input {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

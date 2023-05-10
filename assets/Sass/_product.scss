@@ -1,0 +1,90 @@
+.product {
+    background: #E1E1C2;
+}
+
+.product_cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 120px 0 50px;
+
+    h2 {
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 139%;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: #91916C;
+    }
+
+    h3 {
+        font-family: 'Playfair Display';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 139%;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #65653E;
+        max-width: 700px;
+    }
+
+    .prod_central {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+
+        .icons_prod {
+            width: 58px;
+            height: 58px;
+            background: #E5A985;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 100;
+            cursor: pointer;
+            &:hover {
+                background-color: #000000;
+            }
+        }
+
+        .central_img {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: center;
+            padding: 50px 25px 0;
+
+            img {
+                border-radius: 15px;
+            }
+        }
+
+        @media (max-width: 1150px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media (max-width: 750px) {
+            gap: 15px;
+            .central_img {
+                padding: 0;
+            }
+        }
+    }
+
+    @media (max-width: 750px) {
+        h2 {
+            font-size: 26px;
+        }
+
+        h3 {
+            font-size: 28px;
+        }
+    }
+}

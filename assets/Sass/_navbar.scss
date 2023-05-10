@@ -1,0 +1,207 @@
+@import url(https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500;600;800;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Playfair+Display:wght@100;200;300;400;500;600;800;900&display=swap);
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+/*! navbar */
+
+.navbar {
+    background: #FFFFFF;
+}
+
+.navbar_cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+
+
+    &_logo {
+        max-width: 198px;
+        max-height: 45px;
+    }
+
+    
+    &_ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 70px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 27px;
+
+        color: #000000;
+
+        & li:hover {
+            color: #cb3131;
+        }
+    }
+
+    
+
+    &_burger {
+        display: none;
+    }
+
+    &_radio {
+        display: none;
+    }
+
+    @media (max-width: 960px) {
+        &_ul {
+            position: fixed;
+            right: -200%;
+            top: 70px;
+            background-color: #b7b175a3;
+            transition: ease-in-out 3s;
+            font-size: 16px;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+            padding: 50px 0;
+
+            button {
+                margin-left: 0;
+            }
+        }
+
+        &_burger {
+            display: block;
+            color: #000000;
+            font-size: 22px;
+        }
+
+        #ham:checked + ul {
+            right: 0;
+            left: 0;
+            width: 100%;
+        }
+    }
+}
+
+/*! end of navbar */
+
+.showcase_cont {
+    display: flex;
+    gap: 96px;
+    align-items: center;
+
+    .right_case {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        h2 {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 56px;
+            line-height: 139%;
+            letter-spacing: 0.02em;
+            color: #E5A985;
+            max-width: 600px;
+        }
+
+        p {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 171%;
+            letter-spacing: 0.02em;
+            color: #4A4747;
+            margin-bottom: 20px;
+            max-width: 576px;
+        }
+
+        form {
+            display: flex;
+            gap: 15px;
+
+            input {
+                padding: 15px 30px;
+                min-width: 400px;
+                background: #E5E5E5;
+                border-radius: 8px 0px 0px 8px;
+                border: none;
+                outline: none;
+            }
+
+            button {
+                padding: 15px 22px;
+                font-family: 'Nunito Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 135.5%;
+                color: #FFFFFF;
+                background: #91916C;
+                border-radius: 0px 8px 8px 0px;
+                max-height: 58px;
+                border: none;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #000000;
+                }
+            }
+
+            @media (max-width: 650px) {
+                flex-wrap: wrap;
+                justify-content: center;
+
+                input {
+                    width: 100%;
+                    min-width: fit-content;
+                    border-radius: 8px 8px 8px 8px;
+                }
+
+                button {
+                    border-radius: 8px 8px 8px 8px;
+                }
+            }
+        }
+    }
+    @media (max-width: 1250px) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.same {
+    border: 3px solid #91916C;
+    margin-top: 24px;
+    margin-bottom: 25px;
+    min-width: 288px;
+    max-width: 288px;
+    margin: 0 auto;
+    height: 0;
+}
